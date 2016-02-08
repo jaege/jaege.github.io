@@ -1,21 +1,56 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Jaege
+tagline: 'Learn to Live'
+email: jaege@163.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A place to write, a place to think, a place to live.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://jaege.github.io" # the base hostname & protocol for your site
+github_username: jaege
+#twitter_username: jaege
 
 # Build settings
 markdown: kramdown
+paginate: 5
+
+# Read settings
+exclude: ["Gemfile", "Gemfile.lock", "README.md"]
+
+# Output settings
+#permalink: pretty
+permalink: /:year/:month/:title
+
+# About/contact settings (use `defaults` instead)
+author:
+  name: Jaege
+  url: "http://jaege.github.io"
+  email: jaege@163.com
+
+# Custom variables
+#version: 1.0.0
+
+# Github default settings, can NOT be changed
+lsi: false
+#safe: true
+#source: [your repo's top level directory]
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+
+# Github default settings, can be changed
+kramdown:
+  input: GFM
+  hard_wrap: false
+#github: [metadata]
+gems:
+- jekyll-paginate
+#- jekyll-coffeescript
+
+# Plugins supported by Github
+#gems:
+#- jemoji
+#- jekyll-mentions
+#- jekyll-redirect-from
+#- jekyll-sitemap
+#- jekyll-feed

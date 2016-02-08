@@ -1,24 +1,33 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+    <span class="post-date"><i class="fa fa-calendar-o"></i> {{ post.date | date: "%b %-d, %Y" }} &nbsp; <i class="fa fa-pencil"></i> {% if post.author %}{{ post.author }}{% else %}{{ site.author.name }}{% endif %}</span>
+    {{ post.excerpt }}
+    <p><a href="{{ post.url }}">&nbsp;Read full artile&nbsp;<i class="fa fa-chevron-right"></i></a></p>
+  </div>
+  {% endfor %}
 </div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}"><i class="fa fa-arrow-left"></i>&nbsp;Older&nbsp;</a>
+  {% else %}
+    <span class="pagination-item older"><i class="fa fa-arrow-left"></i>&nbsp;Older&nbsp;</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">&nbsp;Newer&nbsp;<i class="fa fa-arrow-right"></i></a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">&nbsp;Newer&nbsp;<i class="fa fa-arrow-right"></i></a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">&nbsp;Newer&nbsp;<i class="fa fa-arrow-right"></i></span>
+  {% endif %}
+</div>
+

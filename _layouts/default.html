@@ -3,18 +3,24 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="sidebar-overlay">
 
-    {% include header.html %}
+    {% include sidebar.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      {% include header.html %}
+
+      <div class="container content">
         {{ content }}
       </div>
     </div>
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
     {% include footer.html %}
+    {% include foot.html %}
 
   </body>
-
 </html>

@@ -1,7 +1,18 @@
 # Jekyll
 _site
+_gh_pages
 .sass-cache
 .jekyll-metadata
+.ruby-version
 
-# vim
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
 *.swp
+*.zip
+*.vi
+*~
