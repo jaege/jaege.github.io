@@ -7,4 +7,5 @@ Without further declaration, all articles are licensed under [Creative Commons A
 
 * Theme from [Lanyon](http://lanyon.getpoole.com)
 * Powered by [Jekyll](http://jekyllrb.com)
-* Hosted on [GitHub Pages](https://pages.github.com) for free
+* Hosted on [GitHub Pages](https://pages.github.com)
+* Comment powered by [Disqus](https://pages.github.com)
