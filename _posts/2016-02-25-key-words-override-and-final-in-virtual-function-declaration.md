@@ -56,8 +56,8 @@ D::f1() D::f2() D::f3() B::f6() D::f7() D::f8() B::f9()
 
 1. Compare `f1()` and `f6()`. We know that `override` and `final` is indepent sematically.
 
-  - `override` means the function is overriding a virtual function in its base class. See `f1()` and `f3()`.
-  - `final` means the function cannot be overrided by its derived class. (But the function itself need not override a base class virtual function.) See `f6()` and `f4()`.
+    - `override` means the function is overriding a virtual function in its base class. See `f1()` and `f3()`.
+    - `final` means the function cannot be overrided by its derived class. (But the function itself need not override a base class virtual function.) See `f6()` and `f4()`.
 
 2. Compare `f2()` and `f3()`. We know that if a member function is declared without `virtual` and with `final`, it means that it already override a virtual function in base class. In this case, the key word `override` is redundant.
 
